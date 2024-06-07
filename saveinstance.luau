@@ -1366,6 +1366,7 @@ local function synsaveinstance(CustomOptions, CustomOptions2)
 			end
 
 			if raw == nil then
+				writefile("ussi-debug.txt", "gethiddenproperty params: " .. instance.ClassName .. " " .. PropertyName)
 				local ok, result = pcall(gethiddenproperty, instance, PropertyName)
 
 				if ok then
